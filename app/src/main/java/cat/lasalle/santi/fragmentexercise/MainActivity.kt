@@ -3,9 +3,9 @@ package cat.lasalle.santi.fragmentexercise
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity(), EmailFragment.OnButtonPressedListener {
+class MainActivity : AppCompatActivity(), EditTextFragment.OnButtonPressedListener {
     override fun onButtonPressed() {
-        val f = ListFragment()
+        val f = TextViewFragment()
         supportFragmentManager.beginTransaction().
                 replace(R.id.main_container, f).
                 commit()
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity(), EmailFragment.OnButtonPressedListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val f = EmailFragment()
+        val f = EditTextFragment()
         supportFragmentManager.beginTransaction().
             add(R.id.main_container, f).
             commit()

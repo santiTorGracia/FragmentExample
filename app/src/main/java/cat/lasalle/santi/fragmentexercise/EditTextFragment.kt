@@ -7,14 +7,13 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import kotlinx.android.synthetic.main.fragment_email.*
+import kotlinx.android.synthetic.main.fragment_edit_text.*
 
 /**
  * A simple [Fragment] subclass.
  *
  */
-class EmailFragment : Fragment() {
+class EditTextFragment : Fragment() {
 
     interface OnButtonPressedListener {
         fun onButtonPressed()
@@ -27,7 +26,7 @@ class EmailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_email, container, false)
+        return inflater.inflate(R.layout.fragment_edit_text, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
