@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment_edit_text.*
 class EditTextFragment : Fragment() {
 
     interface OnButtonPressedListener {
-        fun onButtonPressed()
+        fun onButtonPressed(text: String)
     }
 
     lateinit var listener: OnButtonPressedListener
@@ -32,7 +32,7 @@ class EditTextFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         press_me.setOnClickListener {
-            listener.onButtonPressed()
+            listener.onButtonPressed(edit_text_text.text.toString())
         }
     }
 

@@ -4,10 +4,11 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity(), EditTextFragment.OnButtonPressedListener {
-    override fun onButtonPressed() {
-        val f = TextViewFragment()
+    override fun onButtonPressed(text: String) {
+        val f = TextViewFragment.newInstance(text)
         supportFragmentManager.beginTransaction().
                 replace(R.id.main_container, f).
+                addToBackStack(null).
                 commit()
     }
 
