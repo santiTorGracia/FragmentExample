@@ -37,9 +37,13 @@ class TextViewFragment : Fragment() {
         text_view_text.text = text
     }
 
+    fun updateText(text: String) {
+        text_view_text.text = text
+    }
+
     companion object {
         @JvmStatic
-        fun newInstance(text: String) =
+        fun newInstance(text: String = "") =
             TextViewFragment().apply {
                 arguments = Bundle().apply {
                     putString(TEXT, text)

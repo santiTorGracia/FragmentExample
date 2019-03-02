@@ -19,7 +19,7 @@ class EditTextFragment : Fragment() {
         fun onButtonPressed(text: String)
     }
 
-    lateinit var listener: OnButtonPressedListener
+    private lateinit var listener: OnButtonPressedListener
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
